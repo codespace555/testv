@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "/sevrev.js",
+        "src": "./sevrev.js",
         "use": "@vercel/node"
       }
     ],
