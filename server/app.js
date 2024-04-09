@@ -15,6 +15,12 @@ app.use(express.json({ limit: limit }));
 app.use(express.urlencoded({ extended: true, limit: limit }));
 app.use(express.static("public"));
 
+app.get("/",(req, res) => {
+  res.status(200).send({
+    data: "NoteBook Server",
+  });
+})
+
 import addproductRouts  from "./src/routes.js"
 app.use("/api/",addproductRouts )
 
