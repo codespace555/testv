@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = "http://localhost:3000/api"
+const api = "https://testv-2.onrender.com/api"
 const addaproduct = async (title) => {
     try {
       const response = await axios.post(
