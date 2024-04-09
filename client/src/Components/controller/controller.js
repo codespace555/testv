@@ -1,9 +1,10 @@
 import axios from "axios";
 
+const api = "http://localhost:3000/api"
 const addaproduct = async (title) => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/addProduct`,
+        `${api}/addProduct`,
         {
           title,
         },
@@ -23,7 +24,7 @@ const addaproduct = async (title) => {
   const getProduct = async() =>{
     try {
         const response = await axios.post(
-          `http://localhost:3000/api/getproduct`,
+          `${api}/getproduct`,
          
           {
             headers: {
@@ -42,7 +43,7 @@ const addaproduct = async (title) => {
   const deletedProduct = async (id) => {
     try {
      await axios.delete(
-        `http://localhost:3000/api/deleteproduct/${id}`
+        `${api}/deleteproduct/${id}`
       );
     
     } catch (error) {
@@ -54,7 +55,7 @@ const addaproduct = async (title) => {
   const searchProduct = async (search) => {
     try {
     const res =  await axios.get(
-        `http://localhost:3000/api/productsearch/search?search=${search}`
+        `${api}/productsearch/search?search=${search}`
       );
       
     return res.data
